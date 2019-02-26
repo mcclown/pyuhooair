@@ -59,6 +59,7 @@ class UhooDev:
         refresh.
         """
         current_data = get_current_data(self._auth, serial=self._serial)
+        self._data['temperature'] = current_data['Temperature']
         self._data['CO'] = current_data['CO']
         self._data['air_pressure'] = current_data['Air Pressure']
         self._data['humidity'] = current_data['Relative Humidity']
